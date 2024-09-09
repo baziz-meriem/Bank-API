@@ -1,0 +1,52 @@
+
+
+###Get All Customers
+GET http://localhost:8081/api/v1/customers
+
+### Create a Customer
+POST http://localhost:8081/api/v1/customers
+Content-Type: application/json
+
+{
+  "name": "Meriem Baziz",
+  "street": "2500 logts",
+  "city": "sidi abdelah",
+  "state": "Algiers",
+  "postal_code": "67880",
+  "phone_number": "0553056409"
+}
+
+
+
+###Get Transfer History
+GET http://localhost:8081/api/v1/transactions/history/4
+###Create a Transaction
+POST http://localhost:8081/api/v1/transactions
+Content-Type: application/json
+
+{ "amount": 800.0,
+  "source_account_id": 1,
+  "target_account_id": 1
+}
+
+###Get All Transactions
+GET http://localhost:8081/api/v1/transactions
+
+
+
+
+
+### Get Account Balance
+GET http://localhost:8081/api/v1/accounts/2/balance
+
+### Create an Account
+POST http://localhost:8081/api/v1/accounts
+Content-Type: application/json
+
+{  "branch_code": "12745",
+  "balance": 8000,
+  "account_type": "SAVINGS",
+  "customer_id": 2
+}
+
+
